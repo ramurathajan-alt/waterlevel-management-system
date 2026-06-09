@@ -1,0 +1,48 @@
+.water-info-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.subheading {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.indicator-list {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+  list-style: none;
+}
+
+.level {
+  font-weight: 500;
+}
+
+.level.normal {
+  color: #16a34a; /* green-600 */
+}
+
+.level.high {
+  color: #ca8a04; /* yellow-600 */
+}
+
+.level.critical {
+  color: #dc2626; /* red-600 */
+}
+
+.level.low {
+  color: #2563eb; /* blue-600 */
+}

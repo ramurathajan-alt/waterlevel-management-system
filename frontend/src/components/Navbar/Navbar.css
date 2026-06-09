@@ -1,0 +1,83 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #006cb7;
+    padding: 1rem 2rem;
+    color: white;
+    border-bottom: 4px solid #3399cc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .navbar h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    color: white;
+    flex-grow: 1;
+  }
+  
+  .navbar-profile {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .navbar-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #cce6ff;
+    transition: transform 0.2s;
+  }
+  
+  .navbar-profile:hover img {
+    transform: scale(1.1);
+  }
+  
+  .navbar-profile-downdrop {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 0.5rem 0;
+    width: 150px;
+    display: none;
+  }
+  
+  .navbar-profile:hover .navbar-profile-downdrop {
+    display: block;
+  }
+  
+  .navbar-profile-downdrop li {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .navbar-profile-downdrop li img {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar-profile-downdrop li:hover {
+    background-color: #e6f2ff;
+  }
+  
+  .navbar-profile-downdrop hr {
+    margin: 0.3rem 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  

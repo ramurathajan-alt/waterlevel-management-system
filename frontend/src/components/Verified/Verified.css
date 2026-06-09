@@ -1,0 +1,54 @@
+/* src/components/Verified.css */
+
+.verified-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.verified-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.verified-list {
+  list-style: none;
+  padding: 0;
+}
+
+.verified-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.delete-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+  background-color: #c5303d;
+}
+
+.delete-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}

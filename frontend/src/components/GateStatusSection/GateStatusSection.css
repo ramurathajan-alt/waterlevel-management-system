@@ -1,0 +1,216 @@
+/* Container for gate section */
+.gate-section {
+  margin-bottom: 2rem;
+  padding-bottom: 20px;
+
+}
+/* Wave background setup */
+.gate-section {
+  max-height: 315px;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  background: #48b2f8; /* Light blue base */
+  border-radius: 0px 0px 12px 12px;
+}
+
+/* Create animated wave layers */
+.gate-section::before,
+.gate-section::after {
+  content: "";
+  position: absolute;
+  left: 100px;
+  bottom: 0;
+  width: 200%;
+  height: 150px;
+  background: url('../../assets/wave.png') repeat-x; /* Replace with correct path */
+  background-size: cover;
+  animation: waveMove 10s linear infinite;
+  opacity: 0.4;
+  z-index: 0;
+}
+.gate-section::before,
+.gate-section::after {
+  background-repeat: repeat-x;
+  background-size: 1000px 150px;
+  mask-image: linear-gradient(to top, black 60%, transparent 100%);
+}
+
+
+.gate-section::after {
+  animation-delay: -5s;
+  opacity: 0.6;
+  bottom: -10px;
+}
+
+/* Make sure grid and card content stay above wave */
+.gate-grid {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Gate cards container: one column (no grid columns) */
+.gate-grid {
+  display: block; /* single column */
+  gap: 1rem;
+}
+
+/* Gate card styling */
+.card {
+  position: relative;
+  overflow: hidden;
+  background-color: #e0f2fe; /* light blue base */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  
+  /* Add any other existing styles you need */
+}
+
+/* Animated water background using pseudo-element */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 300%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 123, 255, 0.15),
+    rgba(0, 123, 255, 0.15) 20px,
+    rgba(0, 123, 255, 0.25) 30px,
+    rgba(0, 123, 255, 0.15) 40px
+  );
+  animation: wave-bg 12s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 0.5rem;
+}
+
+/* Keep card content above the background animation */
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Keyframes for horizontal wave animation */
+@keyframes wave-bg {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Gate title flex container */
+.gate-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40px;
+}
+
+/* Status badge styling */
+.gate-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.3rem; /* approx py-0.5 px-2.5 */
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.gate-status-badge.open {
+  background-color: #fee2e2; /* red-100 */
+  color: rgb(255, 0, 34); /* red-800 */
+}
+
+.gate-status-badge.closed {
+  background-color: #d1fae5; /* green-100 */
+  color: rgb(3, 210, 138); /* green-800 */
+}
+
+/* Small icon inside badges */
+.icon-small {
+  height: 1rem; /* h-4 */
+  width: 1rem;  /* w-4 */
+  margin-right: 0.25rem; /* mr-1 */
+}
+.open-icon-small {
+  height: 1.6rem; /* h-4 */
+  width: 1.6rem;  /* w-4 */
+  margin-right: 0.25rem; /* mr-1 */
+}
+/* Spacing between info rows */
+.gate-info > div {
+  margin-bottom: 1rem;
+}
+
+/* Labels */
+.label {
+  text-align: left;
+  font-size: 0.875rem; /* text-sm */
+  color: #6b7280; /* gray-500 */
+  margin-bottom: 0.125rem;
+}
+.waterlabel{
+  font-size: 1.5rem;
+  color: #2f3238;
+  margin-bottom: 0.125rem;
+}
+/* Water level text */
+.water-level {
+  font-size: 2.5rem; /* text-2xl */
+  font-weight: 700;
+}
+
+.water-level.critical {
+  color: rgb(255, 0, 34); /* red-600 */
+}
+
+.water-level.high {
+  color: #ca8a04; /* yellow-600 */
+}
+
+.water-level.low {
+  color: #2563eb; /* blue-600 */
+}
+
+.water-level.normal {
+  color: #16a34a; /* green-600 */
+}
+
+/* Flex row for icon + text */
+.flex-row {
+  display: flex;
+  align-items: flex-start;
+}
+.update-time{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Gray icons */
+.gray-icon {
+  color: #6b7280; /* gray-500 */
+  margin-top: 0.125rem;
+}
+
+/* Value text */
+.value {
+  font-weight: 500;
+}

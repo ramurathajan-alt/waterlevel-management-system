@@ -1,0 +1,53 @@
+.create-admin-popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 999;
+}
+
+.create-admin-container {
+    place-self: center;
+    width:max(23vw,330px) ;
+    color: #808080;
+    background-color:white ;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+}
+.admin-popup-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.admin-popup-inputs input{
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+}
+.create-admin-container button{
+    border: none;
+    padding: 4px;
+    border-radius:5px;
+    color: white;
+    background-color: rgb(71, 175, 255);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-header img {
+  cursor: pointer;
+  height: 24px;
+}

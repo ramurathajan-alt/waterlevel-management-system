@@ -1,0 +1,78 @@
+.dashboard-header {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('../../assets/tank2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: aliceblue;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.admin-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.admin-title {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+
+.admin-subtitle {
+  font-size: 16px;
+  color: #d3d3d3;
+  margin: 0;
+}
+
+.admin-header-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.refresh-button
+{
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #47afff4a;
+  color: white;
+  transition: background-color 0.2s;
+}
+.create-admin-button {
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #47afff48;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.refresh-button:hover,
+.create-admin-button:hover {
+  background-color: #1a90ff;
+}
+
+.refresh-button:disabled {
+  background-color: #a3d7ff;
+  cursor: not-allowed;
+}

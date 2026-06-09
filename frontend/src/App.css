@@ -1,0 +1,166 @@
+@import "tailwindcss";
+#root {
+  max-width: 100%;
+  padding: 2px;
+  text-align: center;
+  width: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #247cd5;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  padding: 1px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Card Styles */
+.card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 18px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #718096;
+}
+
+.card-content {
+  padding-top: 16px;
+}
+
+.card-footer {
+  padding-top: 8px;
+  font-size: 12px;
+  color: #718096;
+}
+
+/* Button Styles */
+.button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button.default {
+  background-color: #3182ce;
+  color: #fff;
+  border: none;
+}
+
+.button.destructive {
+  background-color: #e53e3e;
+  color: #fff;
+  border: none;
+}
+
+.button.ghost {
+  background-color: transparent;
+  border: 1px solid #e2e8f0;
+  color: #4a5568;
+}
+
+/* PublicPortal */
+.public-portal {
+  margin-top: 40px;
+}
+
+.card-status {
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+.card-status.open {
+  background-color: #c6f6d5;
+  color: #48bb78;
+}
+
+.card-status.closed {
+  background-color: #fed7d7;
+  color: #f56565;
+}
+
+/* Admin Dashboard */
+
+.alert-list {
+  margin-top: 20px;
+}
+
+.alert-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.alert-item .status {
+  font-size: 12px;
+  color: #38a169;
+}
+
+.alert-item .status.inactive {
+  color: #e53e3e;
+}
